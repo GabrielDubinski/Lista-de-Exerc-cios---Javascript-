@@ -1,0 +1,13 @@
+function calcularCheckout(valorProduto, idadeCliente) {
+  let desconto;
+
+  if (idadeCliente >= 60) {
+    desconto = 0.15;
+  } else {
+    desconto = 0.05;
+  }
+
+  let valorFinal = valorProduto - valorProduto * desconto;
+
+  return `R$ ${valorFinal.toFixed(2)}`;
+}
